@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Foodeze Food Delivery & Take Out</title>
+	<link rel="stylesheet" type="text/css" href="css\style-2.css?1581014130">
+	<link rel="stylesheet" type="text/css" href="rs-plugin\css\style.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="rs-plugin\css\settings.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="fontawesome\css\font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css\jquery.timepicker.css">
+	<link rel="shortcut icon" href="img\002.png">
+	<script src="js\jquery-1.12.4.js"></script>
+	<script src="js\jquery-ui.js"></script>
+	<script src="rs-plugin\js\jquery.themepunch.tools.min.js"></script>
+	<script src="rs-plugin\js\jquery.themepunch.revolution.min.js"></script>
+	<script src="js\jquery.validate.min.js"></script>
+	<script src="js\jquery.inputmask.bundle.js"></script>
+	<script src="js\inputmask.numeric.extensions.js"></script>
+	<script src="js\phone.js"></script>
+	<script src="js\jquery.timepicker.js"></script>
+	<script src="js\pagination.js"></script>
+	<script src="js\custom-1.js?1581014130"></script>
+	<!--<script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="cbc0c321-bdce-4a9a-9baa-f3ddc945d35e";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>-->
+	<script src="https://maps.google.com/maps/api/js?key=AIzaSyAEDq8M6WsXVmo_08lPapjlqYCFVRBt6ro&libraries=places"></script>
+	<script src="js\locationpicker.jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="slick\slick.css">
+	<link rel="stylesheet" type="text/css" href="slick\slick-theme.css">
+	<script src="slick\slick.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	jQuery(document).ready(function(){
+
+		jQuery(".quote ul").slick({
+		    dots: true,
+			arrows: false,
+		    infinite: true,
+		    centerMode: false,
+		    autoplay: true,
+			autoplaySpeed: 5000,
+		    slidesToShow: 1,
+		    slidesToScroll: 1
+		});
+
+	});
+
+	//toggle menu
+	function openNav() {
+		jQuery('#opensidemenu').toggleClass('change');
+		jQuery('#mySidenav').toggleClass('toggle');
+	}
+	</script>
+    <script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#dropdownmenu").slideToggle("slow");
+    });
+});
+</script>
+	</head>
+	<body class="home">
+<script>
+   $(window).load(function() {
+     $('#status').fadeOut();
+     $('#preloader').delay(350).fadeOut('slow');
+     $('body').delay(350).css({'overflow':'visible'});
+   })
+  </script>
+	<div id="preloader" align="center">
+      <div id="loading"> <img src="img\loader.gif" alt="Loading.." height="140"> </div>
+    </div>
+<header class="siteheader">
+      <div class="wdth">
+    <div class="logo left"> <a href="index.html"><img src="img\foodeze_logo-1.png?time=1581014130" alt=""></a> </div>
+    <div class="right navbar">
+                    <ul class="nav-menu dnav">
+                      </ul>
+        </div>
+    <div class="clear"></div>
+  </div>
+    </header>
+
+<div class="landingimage courier bgimage" style="background-image: url(img/bg-small.jpg);">
+  <div class="inner">
+    <div class="wdth">
+      <div class="topvh">
+        <div class="col40 left">
+          <h1>Foodeze, Your food is on the way</h1>
+          <h3>At foodeze, it's all about delivering what you desire for.</h3>
+          <p style="display:none;"><a href="#" class="button">Learn More</a></p>
+        </div>
+                <div class="col40 right">
+          <div class="frm">
+            <form action="index.php?reset=ok" method="post" id="forform" style="display: none;">
+              <h2 class="title">Forgot your password?</h2>
+              <p>
+              <input type="text" name="emailaddr" required=''>
+              <label alt="Email" placeholder="Email">
+              </label></p>
+              <p>
+                <input type="submit" class="button" value="Recover Password">
+              </p>
+              <p class="byproceeding"> Already have an account? <a href="javascript:;" id="login">Login</a> </p>
+            </form>
+            <form action="?log=in" method="post" id="logform123" style="display: none;">
+              <h2 class="title">Login</h2>
+              <p>
+              <input type="text" name="eml" required="">
+              <label alt="Email" placeholder="Email">
+              </label></p>
+              <p>
+              <input type="password" name="pswd" required="">
+              <label alt="Password" placeholder="Password">
+              </label></p>
+              <p>
+                <input type="submit" class="button" value="Log In">
+              </p>
+              <p class="byproceeding"> Not have an account? <a href="javascript:;" id="register">Register</a> </p>
+              <p class="byproceeding" style="margin-top: 5px;"> Forgot Password? <a href="javascript:;" id="forgot">Recover</a> </p>
+            </form>
+            <script>
+				$(document).ready(function(){
+					$("input#phne").inputmask();
+				});
+				</script>
+            <form action="?reg=ok" method="post" id="regform">
+              <h2 class="title">Apply Today</h2>
+              <p>
+              <span class="left col50" style="position: relative;">
+              <input type="text" name="restoname" required="">
+              <label alt="Provider Name" placeholder="Provider Name">
+              </label></span> <span class="right col50">
+              <input required="" type="text" name="contname">
+              <label alt="Contact Name" placeholder="Contact Name">
+              </label></span> <span class="clear" style="display: block;"></span>
+              </p>
+              <p>
+              <span class="left col50" style="position: relative;">
+              <input required="" type="text" name="phne" id="phne" class="telinfo" value="+27" data-fixedvalue="+27" data-inputmask="'alias': 'phone'">
+              <label alt="Contact Phone" placeholder="Contact Phone">
+              </label></span> <span class="right col50">
+              <input type="email" name="emailaddr" required="">
+              <label alt="Email" placeholder="Email">
+              </label></span> <span class="clear" style="display: block;"></span>
+              </p>
+              <p>
+              <input required="" type="text" name="restaddr">
+              <label alt="Provider Address" placeholder="Provider Address">
+              </label></p>
+              <p>
+                <textarea required="" placeholder="Anything else we should know?" name="anythingelse"></textarea>
+              </p>
+              <p>
+                <input type="submit" class="button" value="Get Started">
+              </p>
+              <p class="byproceeding"> Already have an account? <a href="javascript:;" id="login">Login</a> </p>
+            </form>
+          </div>
+        </div>
+                <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+var el = document.querySelector( ".telinfo" );
+el.addEventListener( "keyup", handleEv);
+el.addEventListener( "blur", handleEv);
+
+
+function handleEv( event )
+{
+   var thisObj = event.currentTarget;
+   var fixedValue = thisObj.getAttribute( "data-fixedvalue" );
+   if ( thisObj.value.indexOf( fixedValue )  != 0 )
+   {
+      console.log(thisObj.value, fixedValue);
+      event.preventDefault();
+      thisObj.value = fixedValue;
+   }
+}
+    
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery("a#forgot").on("click", function(){
+		jQuery('form#logform123').hide();
+		jQuery('form#regform').hide();
+		jQuery('form#forform').show();
+	});
+	jQuery("a#login").on("click", function(){
+		jQuery('form#regform').hide();
+		jQuery('form#logform123').show();
+		jQuery('form#forform').hide();
+	});
+	jQuery("a#register").on("click", function(){
+		jQuery('form#logform123').hide();
+		jQuery('form#regform').show();
+		jQuery('form#forform').hide();
+	});
+});
+</script>
+<div class="threecol section home1 secprimery">
+  <div class="wdth">
+    <div class="section-title">
+      <h2 class="title">Easiest Way To Start</h2>
+    </div>
+    <ul>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfont"><img src="img\ico1.png" alt="Icon"></div>
+          <!--<i class="fa fa-first-order"></i>--> 
+        </div>
+        <h4 class="title">Sign up & Set up</h4>
+        <p>Give us a call or add your contact number so we can get in touch</p>
+      </li>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfont"><img src="img\ico2.png" alt="Icon"></div>
+        </div>
+        <h4 class="title">We will guide you</h4>
+        <p>Our team is there to guide you throughout and provide you all the basic information to get you started</p>
+      </li>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfont"><img src="img\ico3.png" alt="Icon"></div>
+        </div>
+        <h4 class="title">We'll get your restaurant online</h4>
+        <p>We'll place your order online and make it available to our community</p>
+      </li>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfont"><img src="img\ico4.png" alt="Icon"></div>
+          </div>
+        <h4 class="title">Start Receiving Orders</h4>
+        <p>We'll install an upcoming order terminal at your restaurant to help you receive and manage new orders</p>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="teamup bgimage" style="background: url(https://image.delfoo.com/data/background/vendor/restaurant-home.jpg); background-position: 0;">
+  <div style="background: #0009;">
+    <div class="wdth">
+      <div class="col100 left section" align="center">
+        <h2 class="title">Team Up <span>With Confidence</span></h2>
+        <p>Thousands of restaurants trust Foodeze to deliver fresh food, fast. With North America's most advanced food delivery technology, your customers will be delighted to order through Foodeze.</p>
+        <p><a id="button" class="button" style=" text-decoration:none;">Join Now</a></p>
+      </div>
+      <div class="col50 right sec" style="display:none;"> <img src="http://www.ilovealabamafood.com/wp-content/uploads/2011/12/dish-detail-seafood-platter.png" alt=""> </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div class="threecol section home1 white">
+  <div class="wdth">
+    <div class="section-title">
+      <h2 class="title">Features</h2>
+    </div>
+    <ul>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfontsec feature"></div>
+        </div>
+        <h4 class="title">Live tracking</h4>
+        <p>Know where your order is at all times, from the restaurant to your doorstep. Like never before!</p>
+      </li>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfontsec1 feature"></div>
+        </div>
+        <h4 class="title">No delivery area restriction</h4>
+        <p>Our superfast delivery for food delivered fresh & on time, anywhere at any place</p>
+      </li>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfontsec2 feature"></div>
+        </div>
+        <h4 class="title">Increase your revenue</h4>
+        <p>When your sustenance is offered in the app, new clients locate it What's more faithful clients might appreciate it All the more often.</p>
+      </li>
+    </ul>
+    <ul class="clearb">
+      <li>
+        <div class="work-fonts">
+          <div class="iconfontsec3 feature"></div>
+        </div>
+        <h4 class="title">Free registration</h4>
+        <p>Watch your revenue increase quickly. Maximize your kitchen's efficiency and get the business you're missing out on.</p>
+      </li>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfontsec4 feature"></div>
+        </div>
+        <h4 class="title">Pick up location</h4>
+        <p>We'll send orders to your kitchen. You concentrate on cooking great food. We take care of the rest.</p>
+      </li>
+      <li>
+        <div class="work-fonts">
+          <div class="iconfontsec5 feature"></div>
+        </div>
+        <h4 class="title">Get weekly report</h4>
+        <p>You choose your prep times, control the pace of your kitchen, and manage the details for every order.</p>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="section quote" style="display:none;">
+  <div class="wdth">
+    <div class="col50 marginauto">
+      <ul>
+        <li> <i class="fa fa-quote-left"></i>
+          <p class="q">The food courier position allows me to set my own availability around my classes and exams. Picking up open shifts makes it really easy to earn some cash when I have spare time to drive.</p>
+          <p class="a">Andrew 26, Calgary</p>
+        </li>
+        <li> <i class="fa fa-quote-left"></i>
+          <p class="q">The food courier position allows me to set my own availability around my classes and exams. Picking up open shifts makes it really easy to earn some cash when I have spare time to drive.</p>
+          <p class="a">Andrew 26, Calgary</p>
+        </li>
+        <li> <i class="fa fa-quote-left"></i>
+          <p class="q">The food courier position allows me to set my own availability around my classes and exams. Picking up open shifts makes it really easy to earn some cash when I have spare time to drive.</p>
+          <p class="a">Andrew 26, Calgary</p>
+        </li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--<div class="mobrow bgimage" style="background:url(img/bgpatren.png);">
+  <div class="wdth">
+    <div class="left col40 textcenter" style="padding-top: 60px;"> <img src="img/appscreen.png" style="height: 255px;" alt=""> </div>
+    <div class="right col60 section" style="padding-bottom: 0; padding-top: 140px;">
+      <h2 class="title" style="margin: 0px 0 10px 0;">Effortless App</h2>
+      <p style="margin: 0px 0 10px 0;">Our app is easy to access, your favorite restaurant is just a tap away.</p>
+      <p style="margin: 0px 0 10px 0;">Download the app:</p>
+      <p class="logos"> <a href="https://play.google.com/store/apps/details?id=com.dinosoftlabs.foodies.android" target="_blank"><img src="img/gplaystore.svg" alt="play store"></a> <a href="https://itunes.apple.com/us/app/foodies-food-delivery/id1453510709?mt=8" target="_blank"><img src="img/appstore.svg" alt="apple store"></a> </p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>-->
+<div class="section newsletter mobrow" style="background: #282c35;">
+  <div class="wdth">
+    <div class="col40 marginauto">
+      <h3 class="widgettitle">Want coupons, love notes, and updates from us?</h3>
+      <p>Sign up for our newsletter</p>
+      <form name="newsletter" action="" id="subsctiption">
+        <div class="email-f">
+          <input type="email" placeholder="Please enter your email.. ">
+        
+        <select name="city" class="cityies_selection">
+          <option value="">City</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Johansberg">Johansberg</option>
+                  </select>
+        </div>
+        <div class="buttf">
+          <input type="submit" value="Subsctibe" class="subscribe_button">
+        </div>
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="clear"></div>
+<footer class="sitefooter"><div class="wdth">
+	<div class="subfooter2">
+		<div class="left col50">
+			<ul>
+			    <li><a href="contact.html">Contact Us</a></li>
+			    <li><a href="terms.html">Terms and Conditions</a></li>
+			    <li><a href="faqs.html">FAQs</a></li>
+				<!--<li><a href="#">Privacy</a></li>-->
+				<!--<li><a href="#">Terms</a></li>-->
+				<!--<li><a href="#">API Policy</a></li>-->
+				<!--<li><a href="#">CSR</a></li>-->
+				<!--<li><a href="#">Security</a></li>-->
+				<!--<li><a href="#">Sitemap</a></li>-->
+			</ul>
+		</div>
+		<div class="right col50">
+			<ul class="social">
+				<li><a href="#"><i class='fa fa-facebook'></i></a></li>
+				<li><a href="#"><i class='fa fa-instagram'></i></a></li>
+				<li><a href="#"><i class='fa fa-twitter'></i></a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div> 
+	<div class="copyright">
+		All trademarks are properties of their respective owners. &copy; 2019 - Foodeze. All rights reserved.
+	</div> </div></footer>
+
+<div class="popup" id="page_content"><div class="popup_container">
+	<a href="javascript:;" onclick="javascript:jQuery('#page_content').hide();" id="close">&times;</a>
+	<div id="page_content_sec">&nbsp;</div>
+</div></div>
+
+<script>
+$("#button").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".landingimage").offset().top},
+        'slow');
+});
+
+function orderID_notificaiton()
+{
+	
+	var xmlhttp;
+	if(window.XMLHttpRequest)
+	  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	  }
+	else
+	  {// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	  
+	  xmlhttp.onreadystatechange=function()
+	  {
+		if(xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			//alert(xmlhttp.responseText);
+			document.getElementById("bell").innerHTML=xmlhttp.responseText;
+		}
+	  }
+	xmlhttp.open("GET","hotel_order_details_ajax.php?orderID_notificaiton=count");
+	xmlhttp.send();
+	//alert(str1);
+}
+setInterval(orderID_notificaiton, 15*1000);
+</script>
+<div id="bell" style="display:none"></div>
+
+
+</body>
+</html>
